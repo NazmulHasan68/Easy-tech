@@ -37,7 +37,7 @@ export default function AboutSidebar() {
                 rounded-xl px-5 py-3 transition-all duration-500
                 ${
                   isActive
-                    ? "bg-gradient-to-r from-[#2E602F] to-[#4d8b4f] text-white shadow-lg"
+                    ? "bg-linear-to-r from-[#2E602F] to-[#4d8b4f] text-white shadow-lg"
                     : "bg-gray-50 hover:bg-transparent border border-gray-200"
                 }`}
               >
@@ -45,7 +45,7 @@ export default function AboutSidebar() {
                 {!isActive && (
                   <span
                     className="absolute inset-0 rounded-xl opacity-0
-                    bg-gradient-to-r from-[#2E602F] to-[#4d8b4f]
+                    bg-linear-to-r from-[#2E602F] to-[#4d8b4f]
                     group-hover:opacity-100 transition duration-500 -z-10"
                   />
                 )}
@@ -77,13 +77,13 @@ export default function AboutSidebar() {
       </ul>
 
       {/* Divider */}
-      <div className="my-3 h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent" />
+      <div className="my-3 h-px bg-linear-to-r from-transparent via-gray-200 to-transparent" />
 
       {/* CTA */}
       <Link
         to="/contact"
         className="block text-center py-3 rounded-full font-semibold
-        bg-gradient-to-r from-[#2E602F] to-[#4d8b4f]
+        bg-linear-to-r from-[#2E602F] to-[#4d8b4f]
         text-white shadow-lg hover:shadow-2xl
         hover:scale-[1.03] transition-all duration-300"
       >

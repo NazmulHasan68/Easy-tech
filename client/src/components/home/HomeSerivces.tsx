@@ -83,20 +83,20 @@ export default function HomeServices() {
                 key={service.title}
                 initial={{ opacity: 0, y: 60 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: i * 0.2, duration: 0.7 }}
+                transition={{ delay: i * 0.2, duration: 0.5 }}
                 viewport={{ once: true }}
                 whileHover={{ y: -14 }}
                 className="group"
               >
                 <Link
                   to={service.link}
-                  className="relative block rounded-3xl p-[1px] bg-gradient-to-br from-[#2D602E] to-[#98BC62]"
+                  className="relative block rounded-3xl p-0.5 bg-linear-to-br from-[#2D602E] to-[#98BC62]"
                 >
                   {/* Glass Card */}
                   <div className="relative rounded-3xl bg-white/90 backdrop-blur-xl p-8 h-full overflow-hidden transition-all duration-500 group-hover:bg-transparent">
 
                     {/* Hover Gradient */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-[#2D602E] to-[#98BC62] opacity-0 group-hover:opacity-100 transition duration-500" />
+                    <div className="absolute inset-0 bg-linear-to-br from-[#2D602E] to-[#98BC62] opacity-0 group-hover:opacity-100 transition duration-500" />
 
                     <div className="relative z-10 text-center">
 

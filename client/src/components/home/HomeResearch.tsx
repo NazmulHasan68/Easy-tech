@@ -95,7 +95,7 @@ export default function HomeResearch() {
             {items.map((item, i) => (
               <motion.article
                 key={item.title}
-                initial={{ opacity: 0, y: 80 }}
+                initial={{ opacity: 0, y: 70 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.12, duration: 0.8 }}
                 viewport={{ once: true }}
@@ -112,7 +112,7 @@ export default function HomeResearch() {
                   <div className="relative h-44 md:h-52 overflow-hidden">
                     <motion.img
                       whileHover={{ scale: 1.12 }}
-                      transition={{ duration: 0.6 }}
+                      transition={{ duration: 0.4 }}
                       src={item.img}
                       alt={`${item.title} illustration`}
                       className="object-cover w-full h-full"

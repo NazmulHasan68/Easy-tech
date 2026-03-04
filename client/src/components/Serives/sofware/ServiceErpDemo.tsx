@@ -46,7 +46,7 @@ export default function ServiceErpDemo() {
                 className="group relative flex items-center justify-between
                            overflow-hidden rounded-2xl border border-[#98BC62]/40
                            px-6 py-3 transition-all duration-500 shadow hover:shadow-xl
-                           bg-white hover:bg-gradient-to-r hover:bg-[#427B43]"
+                           bg-white over:bg-linear-to-r hover:bg-[#427B43]"
               >
                 {/* Left Section */}
                 <div className="flex items-center gap-5 z-10">

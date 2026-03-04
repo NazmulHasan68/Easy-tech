@@ -31,7 +31,7 @@ export default function ServiceWebDetails() {
           alt={project.name}
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/70 to-black/50" />
+        <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/70 to-black/50" />
 
         <div className="absolute inset-0 flex items-center">
           <div className="max-w-7xl mx-auto px-6 text-white">
@@ -154,7 +154,7 @@ export default function ServiceWebDetails() {
           {/* CTA */}
           <Link
             to="/contact"
-            className="block text-center px-6 py-3 rounded-full bg-gradient-to-r from-[#2E602F] to-[#98BC62] text-white font-semibold hover:scale-105 transition"
+            className="block text-center px-6 py-3 rounded-full bg-linear-to-r from-[#2E602F] to-[#98BC62] text-white font-semibold hover:scale-105 transition"
           >
             Start a Similar Project
           </Link>

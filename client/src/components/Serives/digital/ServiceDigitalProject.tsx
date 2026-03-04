@@ -6,7 +6,7 @@ import { digitalServices } from "../../data/digitalprojectDeta";
 
 export default function ServiceDigitalProject() {
   return (
-    <section className="py-16 bg-gradient-to-b from-[#f7faf7] to-white">
+    <section className="py-16 bg-linear-to-b from-[#f7faf7] to-white">
       <div className="max-w-7xl mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-16">
@@ -35,7 +35,7 @@ export default function ServiceDigitalProject() {
                   <img loading="lazy"
                     src={service.image}
                     alt={service.name}
-                    className="w-full h-[130px] object-cover transition-transform duration-700 group-hover:scale-110"
+                    className="w-full h-32.5 object-cover transition-transform duration-700 group-hover:scale-110"
                   />
 
                   {/* Category badge */}

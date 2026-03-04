@@ -24,18 +24,18 @@ export default function HomeTopClient() {
   return (
     <section className="relative py-24 md:py-32 overflow-hidden">
       {/* ===== Premium Gradient Background ===== */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#f3f8f3] via-white to-[#eef6ee]" />
+      <div className="absolute inset-0 bg-linear-to-b from-[#f3f8f3] via-white to-[#eef6ee]" />
 
       {/* ===== Elegant Ambient Lights ===== */}
       <motion.div
         animate={{ y: [0, -40, 0], x: [0, 30, 0] }}
         transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
-        className="absolute -top-40 -left-40 w-[500px] h-[500px] bg-[#98BC62]/20 blur-[150px] rounded-full"
+        className="absolute -top-40 -left-40 w-125 h-125 bg-[#98BC62]/20 blur-[150px] rounded-full"
       />
       <motion.div
         animate={{ y: [0, 50, 0], x: [0, -30, 0] }}
         transition={{ duration: 35, repeat: Infinity, ease: "linear" }}
-        className="absolute bottom-0 -right-40 w-[500px] h-[500px] bg-[#2E602F]/20 blur-[150px] rounded-full"
+        className="absolute bottom-0 -right-40 w-125 h-125 bg-[#2E602F]/20 blur-[150px] rounded-full"
       />
 
       <div className="relative max-w-7xl mx-auto px-4 md:px-8 z-10">
@@ -64,7 +64,7 @@ export default function HomeTopClient() {
                          flex items-center justify-center p-6 md:p-8"
             >
               {/* Shine effect */}
-              <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-white/40 to-transparent opacity-0 group-hover:opacity-100 transition duration-500" />
+              <div className="absolute inset-0 rounded-2xl bg-linear-to-br from-white/40 to-transparent opacity-0 group-hover:opacity-100 transition duration-500" />
 
               <img loading="lazy"
                 src={logo}

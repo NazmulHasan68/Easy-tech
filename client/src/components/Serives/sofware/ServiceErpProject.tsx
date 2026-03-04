@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 export default function ServiceErpProject() {
   return (
-    <section className="py-16 bg-gradient-to-b from-[#f7faf7] to-white">
+    <section className="py-16 bg-linear-to-b from-[#f7faf7] to-white">
       <div className="max-w-7xl mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">

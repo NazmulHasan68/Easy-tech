@@ -84,14 +84,14 @@ export default function HomeTrustedClient() {
             initial={{ scale: 0.85 }}
             whileInView={{ scale: 1 }}
             whileHover={{ scale: 1.08 }}
-            transition={{ duration: 0.7 }}
+            transition={{ duration: 0.4 }}
             viewport={{ once: true }}
             className="rounded-3xl overflow-hidden shadow-xl border border-[#98BC62]/30"
           >
             <img loading="lazy"
               src={TrustedImg}
               alt="Trusted Clients"
-              className="w-full h-[120px] object-cover"
+              className="w-full h-30 object-cover"
             />
           </motion.div>
 
@@ -133,7 +133,7 @@ export default function HomeTrustedClient() {
                   bounce: 0.4,
                 }}
                 viewport={{ once: true }}
-                className="h-full bg-gradient-to-r from-[#2D602E] to-[#98BC62]"
+                className="h-full bg-linear-to-r from-[#2D602E] to-[#98BC62]"
               />
             </div>
           </div>

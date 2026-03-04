@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 
 export default function ProjectHero() {
   return (
-    <section className="relative h-[100vh] flex items-center justify-center overflow-hidden">
+    <section className="relative h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image */}
       <img loading="lazy"
         src={banner}

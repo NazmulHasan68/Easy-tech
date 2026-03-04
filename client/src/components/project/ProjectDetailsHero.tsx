@@ -12,10 +12,10 @@ export default function ProjectDetailsHero({ project }: any) {
       />
 
       {/* Gradient Overlay (much better than black) */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/70 to-black/80" />
+      <div className="absolute inset-0 bg-linear-to-b from-black/80 via-black/70 to-black/80" />
 
       {/* Bottom fade for smooth next section */}
-      <div className="absolute bottom-0 left-0 w-full h-40 bg-gradient-to-t from-[#f8fbf9] to-transparent" />
+      <div className="absolute bottom-0 left-0 w-full h-40 bg-linear-to-t from-[#f8fbf9] to-transparent" />
 
       {/* Content */}
       <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">

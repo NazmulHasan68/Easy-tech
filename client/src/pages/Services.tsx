@@ -91,7 +91,7 @@ export default function Services() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="pt-32 pb-20 bg-gradient-to-br from-emerald-50 via-white to-blue-50">
+      <section className="pt-32 pb-20 bg-linear-to-br from-emerald-50 via-white to-blue-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
             Our <span className="text-emerald-600">Services</span>
@@ -112,7 +112,7 @@ export default function Services() {
                 className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100"
               >
                 {/* Icon */}
-                <div className={`w-20 h-20 rounded-2xl bg-gradient-to-br ${service.color} flex items-center justify-center text-4xl mb-6 shadow-lg`}>
+                <div className={`w-20 h-20 rounded-2xl bg-linear-to-br ${service.color} flex items-center justify-center text-4xl mb-6 shadow-lg`}>
                   {service.icon}
                 </div>
 
@@ -131,7 +131,7 @@ export default function Services() {
                       key={idx}
                       className="flex items-start text-gray-700"
                     >
-                      <svg className="w-5 h-5 mr-3 text-emerald-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <svg className="w-5 h-5 mr-3 text-emerald-500 mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                       </svg>
                       <span>{feature}</span>
@@ -156,7 +156,7 @@ export default function Services() {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20 bg-gradient-to-br from-gray-50 to-emerald-50">
+      <section className="py-20 bg-linear-to-br from-gray-50 to-emerald-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
@@ -213,7 +213,7 @@ export default function Services() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-emerald-600 to-emerald-800 text-white">
+      <section className="py-20 bg-linear-to-br from-emerald-600 to-emerald-800 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold mb-6">
             Ready to Start Your Project?

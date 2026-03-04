@@ -7,7 +7,7 @@ import { ArrowRight } from "lucide-react";
 export default function ServiceWebbanner() {
   return (
     <section
-      className="relative h-[85vh] min-h-[700px] flex items-center justify-center text-white overflow-hidden"
+      className="relative h-[85vh] min-h-175 flex items-center justify-center text-white overflow-hidden"
       style={{
         backgroundImage: `url(${image})`,
         backgroundSize: "cover",
@@ -15,7 +15,7 @@ export default function ServiceWebbanner() {
       }}
     >
       {/* Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/70 to-black/80" />
+      <div className="absolute inset-0 bg-linear-to-b from-black/80 via-black/70 to-black/80" />
 
       {/* Content */}
       <motion.div

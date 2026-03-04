@@ -201,7 +201,7 @@ export default function ServiceErpProjectDetails() {
 
     <Link
       to="/contact"
-      className="mt-8 block text-center px-6 py-3 rounded-full bg-gradient-to-r from-[#2E602F] to-[#98BC62] text-white font-semibold hover:scale-105 transition"
+      className="mt-8 block text-center px-6 py-3 rounded-full bg-linear-to-r from-[#2E602F] to-[#98BC62] text-white font-semibold hover:scale-105 transition"
     >
       Contact us for a similar project
     </Link>

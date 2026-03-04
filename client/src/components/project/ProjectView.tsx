@@ -34,7 +34,7 @@ export default function ProjectView() {
           />
 
           {/* Dark overlay */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+          <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/40 to-transparent" />
 
           {/* Info Card */}
           <div className="absolute inset-0 flex items-center justify-center">
@@ -58,7 +58,7 @@ export default function ProjectView() {
 
               <Link
                 to={`/project/${project.projectID}`}
-                className="inline-block px-8 py-3 bg-gradient-to-r from-[#2E602F] to-[#98BC62] rounded-full font-semibold text-white hover:scale-105 transition"
+                className="inline-block px-8 py-3 bg-linear-to-r from-[#2E602F] to-[#98BC62] rounded-full font-semibold text-white hover:scale-105 transition"
               >
                 View Project →
               </Link>

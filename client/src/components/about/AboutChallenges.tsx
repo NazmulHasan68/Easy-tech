@@ -81,7 +81,7 @@ export default function AboutChallenges() {
                 className="flex gap-6 group"
               >
                 {/* Icon */}
-                <div className="min-w-[60px] h-[60px] flex items-center justify-center rounded-xl bg-green-100 text-[#2E602F] group-hover:scale-110 transition">
+                <div className="`min-w-15 h-15 flex items-center justify-center rounded-xl bg-green-100 text-[#2E602F] group-hover:scale-110 transition">
                   <Icon size={28} />
                 </div>
 

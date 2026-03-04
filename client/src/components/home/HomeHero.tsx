@@ -13,8 +13,8 @@ export default function HomeHero() {
   return (
     <section className="relative overflow-hidden bg-white">
       {/* BRAND GLOWS */}
-      <div className="absolute -top-40 -left-40 w-[600px] h-[600px] bg-[#98BC62]/30 blur-[150px] rounded-full" />
-      <div className="absolute top-32 right-0 w-[520px] h-[520px] bg-[#2D602E]/20 blur-[160px] rounded-full" />
+      <div className="absolute -top-40 -left-40 w-150 h-150 bg-[#98BC62]/30 blur-[150px] rounded-full" />
+      <div className="absolute top-32 right-0 w-130 h-130 bg-[#2D602E]/20 blur-[160px] rounded-full" />
 
       <div className="max-w-7xl mx-auto px-6 lg:px-12 py-16 flex flex-col lg:flex-row items-center gap-8 md:gap-16">
         
@@ -54,7 +54,7 @@ export default function HomeHero() {
             {/* Sliding BG */}
             <span
               className="absolute inset-0 bg-[#2D602E] 
-                        translate-x-[-100%] group-hover:translate-x-0
+                        -translate-x-full group-hover:translate-x-0
                         transition-transform duration-500 ease-out"
             />
 
@@ -70,7 +70,7 @@ export default function HomeHero() {
 
         {/* RIGHT VISUAL */}
         <div
-          className="lg:w-1/2 relative h-[400px]  md:h-[560px] flex items-center justify-center"
+          className="lg:w-1/2 relative h-100  md:h-140 flex items-center justify-center"
           onMouseMove={(e) => {
             const rect = e.currentTarget.getBoundingClientRect();
             const x = e.clientX - rect.left;

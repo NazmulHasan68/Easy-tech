@@ -23,8 +23,8 @@ export default function ServiceErpIntro() {
 
       <section className="relative py-10 bg-[#f7faf8] overflow-hidden">
         {/* Background Gradients */}
-        <div className="absolute -top-32 -left-32 w-[420px] h-[420px] bg-[#98BC62]/30 rounded-full blur-[120px]" />
-        <div className="absolute bottom-0 -right-32 w-[420px] h-[420px] bg-[#232822]/20 rounded-full blur-[140px]" />
+        <div className="absolute -top-32 -left-32 w-105 h-105 bg-[#98BC62]/30 rounded-full blur-[120px]" />
+        <div className="absolute bottom-0 -right-32 w-105 h-105 bg-[#232822]/20 rounded-full blur-[140px]" />
 
         <div className="relative max-w-7xl mx-auto px-2 md:px-6">
           <div className="grid lg:grid-cols-1 gap-12 lg:gap-20 items-center">
@@ -40,7 +40,7 @@ export default function ServiceErpIntro() {
               <img loading="lazy"
                 src={erpImg}
                 alt="ERP & CRM Solutions by EasyTech Solutions"
-                className="w-full h-[280px] sm:h-[360px] lg:h-[420px] object-cover rounded-3xl shadow-2xl"
+                className="w-full h-70 sm:h-90 lg:h-105 object-cover rounded-3xl shadow-2xl"
               />
 
               {/* Experience Badge */}

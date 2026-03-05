@@ -1,43 +1,50 @@
-
 "use client";
 
 import { motion } from "framer-motion";
-import image from "@/assets/img/seo.jpg";
+import image from "@/assets/banner/digital_icon.jpg";
 import { ArrowRight } from "lucide-react";
 
 export default function ServiceDigitalBanner() {
   return (
     <section
-      className="relative h-[85vh] min-h-[700px] flex items-center justify-center text-white overflow-hidden"
+      className="relative min-h-[90vh] flex items-center overflow-hidden text-white"
       style={{
         backgroundImage: `url(${image})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
     >
-      {/* Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/70 to-black/80" />
+      {/* Brand Gradient Overlay */}
+      <div className="absolute inset-0 bg-linear-to-r from-[#2D5E2E]/85 via-[#2D5E2E]/85 to-[#96BA62]/40"></div>
 
       {/* Content */}
-      <motion.div
-        initial={{ opacity: 0, y: 60 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-        className="relative z-10  text-center max-w-4xl px-6"
-      >
-        {/* Main Title */}
-        <h1 className="text-3xl md:text-5xl font-bold leading-tight mb-4">
-          Digital Marketing
-        </h1>
+      <div className="relative max-w-7xl mx-auto px-6 w-full">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="max-w-2xl"
+        >
+          {/* Breadcrumb */}
+          <div className="inline-flex items-center gap-2 mb-4 md:mb-6 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-xs uppercase tracking-wider">
+            Services <ArrowRight size={14} /> Digital Marketing
+          </div>
 
-        {/* Breadcrumb */}
-        <div className="flex gap-1 bg-[#2D602E] justify-center items-center mb-8 px-4 py-2 rounded-full border border-[#2D602E]/30 shadow-2xl  backdrop-blur-md text-sm tracking-widest uppercase">
-          Services <span className="mx-1 text-amber-500 mt-0 font-bold flex gap-1"><ArrowRight/>Digital Marketing</span> 
-        </div>
+          {/* Title */}
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-3 md:mb-6">
+            Powerful <br />
+            <span className="text-[#96BA62]">Digital Marketing</span>
+          </h1>
 
-        
+          {/* Description */}
+          <p className="text-gray-200 text-xs md:text-sm leading-relaxed mb-8">
+            Grow your brand online with data-driven marketing strategies.
+            We help businesses reach the right audience, increase traffic,
+            and convert visitors into loyal customers.
+          </p>
 
-      </motion.div>
+        </motion.div>
+      </div>
     </section>
   );
 }

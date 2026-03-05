@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import marketingImg from "@/assets/img/seo.jpg"; // marketing image
+import marketingImg from "@/assets/banner/digital_marketing_page.jpg"; // marketing image
 import { CheckCircle } from "lucide-react";
 import SEO from "../../SEO";
 

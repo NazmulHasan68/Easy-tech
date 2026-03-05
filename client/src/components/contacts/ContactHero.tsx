@@ -1,28 +1,52 @@
 "use client";
 
-import heroImg from "@/assets/img/crm.png"; // your background image
+import { motion } from "framer-motion";
+import heroImg from "@/assets/banner/contact.jpg";
+import { ArrowRight } from "lucide-react";
 
 export default function ContactHero() {
   return (
-    <section className="relative pt-32 pb-20 bg-gradient-to-br from-[#98BC62]/20 via-white to-[#232822]/10 overflow-hidden">
+    <section className="relative min-h-[95vh] flex items-center overflow-hidden text-white">
+      
       {/* Background Image */}
-      <img loading="lazy"
+      <img
         src={heroImg}
         alt="Contact Background"
-        className="absolute inset-0 w-full h-full object-cover opacity-20"
+        className="absolute inset-0 w-full h-full object-cover"
       />
 
-      {/* Optional: colored overlay for better text contrast */}
-      <div className="absolute inset-0 bg-[#232822]/70 mix-blend-multiply"></div>
+      {/* Gradient Overlay */}
+      <div className="absolute inset-0 bg-linear-to-r from-[#2D5E2E]/90 via-[#2D5E2E]/70 to-[#96BA62]/40"></div>
 
       {/* Content */}
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h1 className="text-5xl lg:text-6xl font-bold text-[#232822] mb-6">
-          Get in <span className="text-[#98BC62]">Touch</span>
-        </h1>
-        <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-          Have a project in mind? Let's discuss how we can help you achieve your goals.
-        </p>
+      <div className="relative max-w-7xl mx-auto px-6 w-full">
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="max-w-2xl"
+        >
+          
+          {/* Breadcrumb */}
+          <div className="inline-flex items-center gap-2 mb-6 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-xs uppercase tracking-wider">
+            Home <ArrowRight size={14} /> Contact
+          </div>
+
+          {/* Title */}
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+            Let's Start a <br />
+            <span className="text-[#96BA62]">Conversation</span>
+          </h1>
+
+          {/* Description */}
+          <p className="text-gray-200 text-lg leading-relaxed mb-8">
+            Have a question, idea, or project in mind? Our team is ready to help
+            you turn your vision into reality. Reach out and let's build
+            something great together.
+          </p>
+
+
+        </motion.div>
       </div>
     </section>
   );

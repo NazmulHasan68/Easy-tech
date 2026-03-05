@@ -156,7 +156,7 @@ export default function ServiceWebDetails() {
             to="/contact"
             className="block text-center px-6 py-3 rounded-full bg-linear-to-r from-[#2E602F] to-[#98BC62] text-white font-semibold hover:scale-105 transition"
           >
-            Start a Similar Project
+            Contact for Similar Project
           </Link>
         </div>
       </div>

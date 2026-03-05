@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import erpImg from "@/assets/img/res.jpg"; // ERP related image
+import erpImg from "@/assets/banner/sofware_page.jpg"; // ERP related image
 import { CheckCircle } from "lucide-react";
 import SEO from "../../SEO";
 

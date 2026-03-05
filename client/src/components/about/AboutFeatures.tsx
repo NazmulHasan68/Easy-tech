@@ -64,7 +64,7 @@ export default function AboutFeatures() {
                 className="group relative p-8 bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500"
               >
                 {/* Hover gradient */}
-                <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-[#98BC62]/0 to-[#98BC62]/30 opacity-0 group-hover:opacity-100 transition duration-500" />
+                <div className="absolute inset-0 rounded-3xl bg-linear-to-br from-[#98BC62]/0 to-[#98BC62]/30 opacity-0 group-hover:opacity-100 transition duration-500" />
 
                 <div className="relative z-10 flex items-start gap-5">
                   <div className="w-14 h-14 flex items-center justify-center rounded-2xl bg-green-100 text-[#2E602F] group-hover:scale-110 transition">

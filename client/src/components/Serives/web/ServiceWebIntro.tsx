@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import aboutImg from "@/assets/img/Web Development.jpg";
+import aboutImg from "@/assets/banner/website_page.jpg";
 import { CheckCircle } from "lucide-react";
 import SEO from "../../SEO";
 

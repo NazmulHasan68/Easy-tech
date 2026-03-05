@@ -1,71 +1,49 @@
 "use client";
 
 import { motion } from "framer-motion";
-import aboutImg from "@/assets/img/web site.jpg";
 
-export default function AboutIntro() {
+export default function AboutIntroText() {
   return (
     <section className="relative py-28 bg-[#f7faf8] overflow-hidden">
       {/* Background shapes */}
-      <div className="absolute -top-20 -left-20 w-72 h-72 bg-green-200/30 rounded-full blur-3xl" />
-      <div className="absolute bottom-0 right-0 w-80 h-80 bg-green-300/20 rounded-full blur-3xl" />
+      <div className="absolute -top-32 -left-24 w-96 h-96 bg-[#96BA62]/20 rounded-full blur-3xl" />
+      <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#2D5E2E]/10 rounded-full blur-3xl" />
 
-      <div className="relative max-w-7xl mx-auto px-6 grid lg:grid-cols-1 gap-20 items-center">
-        
-        {/* Image */}
+      <div className="relative max-w-5xl mx-auto px-6 text-center">
+        {/* Animated Content */}
         <motion.div
-          initial={{ opacity: 0, x: -80 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="relative h-[350px]"
-        >
-          <img loading="lazy"
-            src={aboutImg}
-            alt="About EasyTech Solutions"
-            className="rounded-3xl shadow-2xl w-full h-full object-cover"
-          />
-
-          {/* Floating badge */}
-          <div className="absolute -bottom-6 -right-6 bg-white shadow-xl rounded-2xl px-6 py-4">
-            <p className="text-[#2E602F] font-semibold text-sm">5+ Years Experience</p>
-            <h4 className="text-xl font-bold">Digital Excellence</h4>
-          </div>
-        </motion.div>
-
-        {/* Content */}
-        <motion.div
-          initial={{ opacity: 0, x: 80 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <h5 className="text-[#2E602F] font-semibold uppercase tracking-widest mb-4">
+          <h5 className="text-[#2D5E2E] font-semibold uppercase tracking-widest mb-4">
             Who We Are
           </h5>
 
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight">
-            Crafting Powerful Digital Solutions That Help Businesses Grow
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+            At <span className="text-[#96BA62]">EasyTech Solutions</span>, we empower businesses with 
+            <br className="hidden md:block" /> 
+            <span className="text-[#2D5E2E]">digital excellence</span> and innovative solutions.
           </h2>
 
-          <p className="text-gray-600 leading-relaxed mb-8">
-            At EasyTech Solutions, we transform ideas into impactful digital experiences.
-            From sleek business websites to feature-rich eCommerce platforms, we build
-            modern, responsive, and performance-driven solutions that elevate brands
-            in the digital space.
+          <p className="text-gray-700 text-lg mb-10 leading-relaxed">
+            Our services include <span className="font-semibold text-[#96BA62]">Digital Marketing</span>, 
+            <span className="font-semibold text-[#96BA62]"> Web Development</span>, 
+            <span className="font-semibold text-[#96BA62]"> ERP / POS Solutions</span>, and more. 
+            We craft tailored strategies that drive growth, enhance online presence, and streamline operations for modern businesses.
           </p>
 
-          {/* Feature points */}
-          <div className="grid sm:grid-cols-2 gap-6">
+          {/* Key Highlights */}
+          <div className="grid sm:grid-cols-3 gap-6 text-left">
             {[
-              "Modern UI with React & Tailwind",
-              "SEO Friendly & High Performance",
-              "Custom Features for Your Business",
-              "Secure Backend with PHP & Laravel",
+              "5+ Years of Proven Experience",
+              "Data-Driven Strategies & ROI Focused",
+              "Custom Solutions for Every Business"
             ].map((item, i) => (
-              <div key={i} className="flex items-start gap-3">
-                <div className="w-3 h-3 mt-2 bg-green-500 rounded-full" />
-                <p className="text-gray-700">{item}</p>
+              <div key={i} className="flex items-start gap-3 justify-center">
+                <div className="w-4 h-4 mt-1 bg-[#96BA62] rounded-full" />
+                <p className="text-gray-700 font-medium">{item}</p>
               </div>
             ))}
           </div>

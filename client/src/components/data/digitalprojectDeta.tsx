@@ -5,6 +5,50 @@ import seo4 from "@/assets/img/digital_project/4.png";
 import seo5 from "@/assets/img/digital_project/5.png";
 import seo6 from "@/assets/img/digital_project/6.png";
 
+const allMarketingTools = [
+  "Google Ads Manager",
+  "Microsoft Ads (Bing)",
+  "Step.io",
+  "Ad Library",
+  "Google Ads",
+  "LinkedIn Ads",
+  "TikTok Ads",
+  "Meta Pixel"
+];
+
+const marketingFacilities = [
+  "Campaign Strategy & Planning",                 // overall plan
+  "Paid Ads Setup & Management",                  // Google Ads, Microsoft Ads, LinkedIn, TikTok
+  "Retargeting & Remarketing Campaigns",         // dynamic audience retargeting
+  "Conversion Tracking & Pixel Setup",           // Meta Pixel, GA4, server-side tracking
+  "Performance Monitoring & Analytics",          // real-time analytics & dashboards
+  "A/B Testing & Optimization",                  // ads, creatives, and landing pages
+  "Budget & ROI Management",                     // cross-platform spend optimization
+  "Audience Targeting & Segmentation",           // micro-targeting & lookalike audiences
+  "Reporting & Insights",                         // automated and custom reports
+  "Server-Side Tracking Implementation",         // advanced analytics
+  "Landing Page Optimization (CRO)",             // heatmaps, user flow analysis
+  "Creative & Ad Copy Development",              // high-converting visuals & text
+  "Competitor & Market Analysis",                // competitor benchmarking
+  "Email Drip Campaign Setup & Automation",      // nurture sequences
+  "SEO & Content Integration",                   // keywords + landing page optimization
+  "Social Media Engagement Strategy",            // community management, engagement loops
+  "Influencer & Affiliate Campaigns",            // influencer collaborations
+  "Video Ad Production & Optimization",          // YouTube / TikTok / Instagram
+  "Multi-Channel Campaign Coordination",         // omnichannel strategy
+  "Custom Analytics Dashboard Setup",            // Tableau / Looker Studio dashboards
+  "CRM Integration & Lead Management",           // connect campaigns to CRM
+  "Marketing Funnel Design & Optimization",      // top-to-bottom funnel optimization
+  "Programmatic Advertising Setup",              // RTB, DSP campaigns
+  "AI-Powered Campaign Optimization",            // predictive & AI tools for ads
+  "Customer Segmentation & Lifetime Value Analysis", // advanced data insights
+  "Chatbot & Automation Integration",            // lead generation and support
+  "Geo-Targeting & Local Campaigns",             // location-specific ads
+  "Conversion Rate & Revenue Forecasting",       // projected ROI analysis
+  "Dynamic Content & Personalization",           // website/app personalization
+  "Cross-Platform Retargeting Automation"        // Google, Meta, TikTok, LinkedIn
+];
+
 
 export const digitalServices = [
   {
@@ -18,14 +62,8 @@ export const digitalServices = [
     website: "https://yourcompany.com/seo",
     description:
       "Boost your website visibility on search engines and attract organic traffic with our tailored SEO strategies.",
-    technologies: ["Google Search Console", "Ahrefs", "SEMRush", "Yoast SEO"],
-    facilities: [
-      "On-Page SEO Optimization",
-      "Keyword Research & Strategy",
-      "Backlink Analysis & Acquisition",
-      "Technical SEO Audits",
-      "Content SEO Recommendations",
-    ],
+    technologies: allMarketingTools,
+    facilities: marketingFacilities,
   },
   {
     id: "social-media-marketing",
@@ -38,14 +76,8 @@ export const digitalServices = [
     website: "https://yourcompany.com/social",
     description:
       "Increase brand awareness and engagement on social platforms like Facebook, Instagram, LinkedIn, and TikTok.",
-    technologies: ["Facebook Ads Manager", "Instagram Insights", "LinkedIn Ads", "Canva", "Hootsuite"],
-    facilities: [
-      "Content Strategy & Planning",
-      "Paid Campaign Management",
-      "Social Media Analytics",
-      "Engagement & Community Management",
-      "Performance Reports",
-    ],
+    technologies: allMarketingTools,
+    facilities: marketingFacilities
   },
   {
     id: "ppc-campaigns",
@@ -57,15 +89,9 @@ export const digitalServices = [
     status: "Live",
     website: "https://yourcompany.com/ppc",
     description:
-      "Drive instant traffic and conversions using Google Ads and other PPC platforms with optimized ad campaigns.",
-    technologies: ["Google Ads", "Bing Ads", "Keyword Planner", "Google Analytics"],
-    facilities: [
-      "Search & Display Campaigns",
-      "Retargeting & Remarketing Ads",
-      "Conversion Tracking Setup",
-      "A/B Ad Testing",
-      "Budget & ROI Optimization",
-    ],
+      "Drive instant traffic and conversions using Google Ads, Microsoft Ads, and other PPC platforms with optimized ad campaigns.",
+    technologies: allMarketingTools,
+    facilities: marketingFacilities
   },
   {
     id: "email-marketing",
@@ -78,14 +104,8 @@ export const digitalServices = [
     website: "https://yourcompany.com/email",
     description:
       "Engage your customers and boost retention with personalized and automated email campaigns.",
-    technologies: ["Mailchimp", "HubSpot", "SendinBlue", "ActiveCampaign"],
-    facilities: [
-      "Automated Email Campaigns",
-      "Newsletter Creation",
-      "Subscriber Segmentation",
-      "Email Analytics & Reports",
-      "A/B Subject Line Testing",
-    ],
+    technologies: allMarketingTools,
+    facilities: marketingFacilities
   },
   {
     id: "content-marketing",
@@ -98,14 +118,8 @@ export const digitalServices = [
     website: "https://yourcompany.com/content",
     description:
       "Create high-quality content to attract, engage, and convert your audience while supporting SEO goals.",
-    technologies: ["WordPress", "Canva", "Grammarly", "Google Trends"],
-    facilities: [
-      "Blog & Article Writing",
-      "Visual Content Creation",
-      "Content Calendar Management",
-      "SEO-Optimized Writing",
-      "Performance Analytics",
-    ],
+    technologies: allMarketingTools,
+    facilities: marketingFacilities
   },
   {
     id: "analytics-reporting",
@@ -118,15 +132,7 @@ export const digitalServices = [
     website: "https://yourcompany.com/analytics",
     description:
       "Track, measure, and improve your digital campaigns with actionable insights from analytics and reporting tools.",
-    technologies: ["Google Analytics 4", "Hotjar", "Tableau", "Looker Studio"],
-    facilities: [
-      "Campaign Performance Tracking",
-      "Website Behavior Analytics",
-      "Custom Dashboards",
-      "Conversion & Funnel Analysis",
-      "Data-Driven Recommendations",
-    ],
+    technologies: allMarketingTools,
+    facilities: marketingFacilities
   },
 ];
-
-

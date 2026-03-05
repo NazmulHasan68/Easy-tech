@@ -30,18 +30,19 @@ export default function HomeHero() {
           transition={{ duration: 0.9 }}
           className="lg:w-1/2 space-y-6 md:space-y-10 mt-12 md:mt-4"
         >
-          <span className="inline-block text-right font-semibold text-[#2D602E] bg-[#98BC62]/20 px-4 py-2 rounded-full text-sm">
-            Digital Solutions
-          </span>
 
-          <h1 className="text-5xl lg:text-7xl font-extrabold leading-tight text-gray-950">
-            Building <br />
-            <span className="text-[#2D602E]">A Better You</span>
+          <span className="inline-block text-right font-semibold text-[#2D602E] bg-[#98BC62]/20 px-4 py-2 rounded-full text-sm">
+            Digital Solutions  
+          </span>
+          {/* Building A Better You*/}
+          <h1 className="text-3xl lg:text-4xl font-extrabold leading-tight text-gray-950">
+             Smart <br></br>Digital Solutions for   <br />
+            <span className="text-[#2D602E]">Modern Businesses </span>
           </h1>
 
           <p className="text-gray-500 text-md md:text-lg max-w-xl">
-            Innovative strategies and data-driven insights that showcase your
-            agency’s expertise in digital marketing and technology.
+            We help businesses grow with powerful web development, digital marketing, and smart 
+            technology solutions.
           </p>
 
           <motion.a
@@ -60,7 +61,7 @@ export default function HomeHero() {
 
             {/* Text */}
             <span className="relative z-10 group-hover:text-white transition-colors duration-500">
-              Explore More
+              Start Your Project
             </span>
 
             {/* Icon */}
@@ -84,7 +85,7 @@ export default function HomeHero() {
           }}
         >
           {/* Soft brand plate */}
-          <div className="absolute w-[85%] h-[85%] bg-gradient-to-br 
+          <div className="absolute w-[85%] h-[85%] bg-linear-to-br 
                           from-[#98BC62]/40 to-[#2D602E]/20 
                           rounded-[50px] blur-2xl opacity-70" />
 
@@ -96,6 +97,7 @@ export default function HomeHero() {
             className="absolute w-[78%] md:w-[65%] rounded-3xl overflow-hidden shadow-2xl"
           >
             <img loading="lazy" src={HeroMain} className="w-full h-full object-cover" />
+            
           </motion.div>
 
           {/* Front image with parallax */}
@@ -106,7 +108,7 @@ export default function HomeHero() {
             transition={{ duration: 1, delay: 0.6 }}
             whileHover={{ scale: 1.04 }}
             className="relative mt-12 z-10 w-[68%] rounded-3xl overflow-hidden
-                       shadow-[0_60px_120px_rgba(45,96,46,0.35)]"
+                       shadow-[0_60px_120px_rgba(45,96,46,0.35)] "
           >
             <motion.img
               src={HeroCard}
@@ -114,6 +116,7 @@ export default function HomeHero() {
               animate={{ y: [0, -10, 0] }}
               transition={{ repeat: Infinity, duration: 7, ease: "easeInOut" }}
             />
+            <div className="px-4 py-1 text-xs  md:text-sm text-center absolute bottom-3 left-1 md:left-14 text-gray-800 font-semibold">Empowering Nimtola Housing Ltd <br></br>with smart digital solutions.</div>
           </motion.div>
 
           {/* Floating stat */}
@@ -123,8 +126,8 @@ export default function HomeHero() {
             transition={{ delay: 1 }}
             className="absolute right-1 md:-right-6 top-10 bg-white rounded-xl shadow-xl p-3 md:p-4 w-28 md:w-40 border border-[#98BC62]/30"
           >
-            <p className="text-sm text-gray-500">Profile Views</p>
-            <h4 className="text-xl md:text-2xl font-bold text-[#2D602E]">45M+</h4>
+            <p className="text-sm text-gray-500">Campaign Reach</p>
+            <h4 className="text-xl md:text-2xl font-bold text-[#2D602E]">45M+ </h4>
           </motion.div>
 
           {/* Floating growth */}
@@ -134,8 +137,8 @@ export default function HomeHero() {
             transition={{ delay: 1.2 }}
             className="absolute -bottom-8 md:left-10 left-0 bg-white rounded-xl shadow-xl p-2 md:p-4 w-32 md:w-44 border border-[#98BC62]/30"
           >
-            <p className="text-sm text-gray-600">Growth</p>
-            <div className="md:h-8 h-6 bg-gradient-to-r from-[#98BC62] to-[#2D602E] rounded-md mt-2" />
+            <p className="text-sm text-gray-600">Client Growth</p>
+            <div className="md:h-8 h-6 bg-linear-to-r from-[#98BC62] to-[#2D602E] rounded-md mt-2" />
           </motion.div>
         </div>
       </div>

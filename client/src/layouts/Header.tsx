@@ -38,10 +38,10 @@ const navItems: NavItem[] = [
     dropdown: [
       { name: "Project", path: "/project" },
       { name: "About", path: "/about" },
-      { name: "Contact", path: "/contact" },
       { name: "Our Client", path: "/our-client" },
     ],
   },
+  { name: "Contact", path: "/contact" },
 ];
 
 
@@ -126,6 +126,8 @@ export default function Header() {
             )
           )}
         </nav>
+
+        
 
         {/* Mobile Toggle */}
         <button

@@ -150,21 +150,25 @@ export default function HomeServices() {
               { end: 1000, label: "Trusted Users", suffix: "+" },
               { end: 800, label: "Positive Reviews", suffix: "+" },
               { end: 98, label: "Reply Rate", suffix: "%" },
-            ].map((item, i) => {
-              const { count, ref } = useCountUp(item.end);
-              return (
-                <div key={i} ref={ref}>
-                  <h3 className="text-xl md:text-4xl font-bold text-[#2D602E]">
-                    {count}{item.suffix}
-                  </h3>
-                  <p className="text-gray-500 text-sm mt-1">{item.label}</p>
-                </div>
-              );
-            })}
+            ].map((item, i) => (
+              <StatCard key={i} item={item} />
+            ))}
           </motion.div>
 
         </div>
       </section>
     </>
+  );
+}
+
+function StatCard({ item }: { item: { end: number; label: string; suffix: string } }) {
+  const { count, ref } = useCountUp(item.end);
+  return (
+    <div ref={ref}>
+      <h3 className="text-xl md:text-4xl font-bold text-[#2D602E]">
+        {count}{item.suffix}
+      </h3>
+      <p className="text-gray-500 text-sm mt-1">{item.label}</p>
+    </div>
   );
 }

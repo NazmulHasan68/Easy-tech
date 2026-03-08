@@ -4,6 +4,7 @@ import GeneralLayout from "./layouts/GeneralLayout";
 import ScrollToTop from "./layouts/ScrollToTop";
 import Loader from "./layouts/Loader";
 import EasySoft from "./pages/EasySoft";
+import ServiceApp from "./pages/ServiceApp";
 
 // Lazy loaded pages
 const Home = lazy(() => import("./pages/Home"));
@@ -22,6 +23,10 @@ const ServiceDigitalProjectDetails = lazy(() =>
 );
 const ServiceErpProjectDetails = lazy(() =>
   import("./components/Serives/sofware/ServiceErpProjectDetails")
+);
+
+const ServiceAppProjectDetails = lazy(() =>
+  import("./components/Serives/app/ServiceAppProjectDetails")
 );
 
 export default function App() {
@@ -53,6 +58,10 @@ export default function App() {
 
             <Route path="/services/erp" element={<ServiceErp />} />
             <Route path="/services/erp/:id" element={<ServiceErpProjectDetails />}/>
+
+            <Route path="/services/app" element={<ServiceApp />} />
+            <Route path="/services/app/:id" element={<ServiceAppProjectDetails />}/>
+
 
 
             {/* Our ventures */}

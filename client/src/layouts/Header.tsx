@@ -20,6 +20,7 @@ const navItems: NavItem[] = [
       { name: "Web Development", path: "/services/web" },
       { name: "Digital Marketing", path: "/services/marketing" },
       { name: "Software solution", path: "/services/erp" },
+      { name: "Mobile App", path: "/services/app" },
     ],
   },
 
@@ -81,7 +82,7 @@ export default function Header() {
                 onMouseEnter={() => setOpenDropdown(item.name)}
                 onMouseLeave={() => setOpenDropdown(null)}
               >
-                <button className="flex items-center gap-1 font-medium text-[#668637] hover:text-[#2E602F] transition">
+                <button className="flex items-center gap-1 font-medium text-[#7ca73b] hover:text-[#2E602F] transition">
                   {item.name}
                   <ChevronDown size={16} />
                 </button>
@@ -93,7 +94,7 @@ export default function Header() {
                       initial={{ opacity: 0, y: 15 }}
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: 10 }}
-                      className="absolute top-10 left-0 bg-white rounded-xl shadow-2xl border border-gray-100 p-3 min-w-[200px]"
+                      className="absolute top-10 left-0 bg-white rounded-xl shadow-2xl border border-gray-100 p-3 min-w-50"
                     >
                       {item.dropdown.map((sub) => (
                         <NavLink
@@ -115,8 +116,8 @@ export default function Header() {
                 className={({ isActive }) =>
                   `font-medium transition ${
                     isActive
-                      ? "text-[#516632] border-b-2 border-[#7a974a] pb-1"
-                      : "text-[#98BC62] hover:text-[#153016]"
+                      ? "text-[#7a974a] border-b-2 border-[#7a974a] pb-1"
+                      : "text-[#73973c] hover:text-[#153016]"
                   }`
                 }
               >

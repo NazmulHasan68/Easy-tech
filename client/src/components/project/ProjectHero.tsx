@@ -28,7 +28,7 @@ export default function ProjectHero() {
         >
           
           {/* Breadcrumb */}
-          <div className="inline-flex items-center gap-2 mb-4 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-xs uppercase tracking-wider">
+          <div  onClick={() => window.scrollBy({ top: 450, behavior: 'smooth' })}  className="cursor-pointer inline-flex items-center gap-2 mb-4 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-xs uppercase tracking-wider">
             Home <ArrowRight size={14} /> Projects
           </div>
 

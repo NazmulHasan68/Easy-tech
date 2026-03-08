@@ -124,9 +124,9 @@ export default function HomeSolutions() {
               whileHover={{ scale: 1.06 }}
               whileTap={{ scale: 0.95 }}
               href="/project"
-              className="inline-flex items-center gap-3 bg-gradient-to-r from-[#2D602E] to-[#98BC62] text-white px-5 md:px-8 py-2 md:py-3 rounded-full font-semibold shadow-lg"
+              className="inline-flex items-center gap-3 bg-linear-to-r  from-[#2D602E] to-[#98BC62] text-white px-5 md:px-8 py-2 md:py-3 rounded-full font-semibold shadow-lg"
             >
-              Explore More →
+              Book Free Consultation →
             </motion.a>
           </motion.div>
 

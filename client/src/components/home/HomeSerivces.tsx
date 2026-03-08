@@ -8,16 +8,27 @@ import { Link } from "react-router-dom";
 import serices1 from "@/assets/img/services/s1-icon-1.png";
 import serices2 from "@/assets/img/services/s1-icon-2.png";
 import serices3 from "@/assets/img/services/s1-icon-3.png";
+import serices4 from "@/assets/img/services/s1-icon-41.png";
+
 import { useCountUp } from "@/hooks/useCountUp";
 
 const services = [
   {
     title: "Web Development",
-    desc: "High-performance, scalable websites crafted for growth.",
+    desc: "Websites designed to generate leads and sales.",
     items: ["eCommerce", "Portfolio", "Custom Web Apps"],
     icon: serices1,
     link: "/services/web",
   },
+
+  {
+    title: "App Development",
+    desc: "Modern mobile apps built for better user experience.",
+    items: ["Android Apps", "iOS Apps", "Cross Platform Apps"],
+    icon: serices4,
+    link: "/services/app",
+  },
+
   {
     title: "Digital Marketing",
     desc: "Data-driven marketing that turns visitors into customers.",
@@ -25,6 +36,7 @@ const services = [
     icon: serices2,
     link: "/services/marketing",
   },
+
   {
     title: "ERP / CRM Solutions",
     desc: "Business automation systems for teams and organizations.",
@@ -77,7 +89,7 @@ export default function HomeServices() {
           </div>
 
           {/* Services Grid */}
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-4 gap-2">
             {services.map((service, i) => (
               <motion.div
                 key={service.title}

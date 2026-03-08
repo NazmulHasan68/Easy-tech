@@ -27,7 +27,7 @@ export default function AboutBreadcrumb() {
         <div className="max-w-xl">
 
           {/* Breadcrumb */}
-          <div className="inline-flex items-center gap-2 bg-[#2d5f2e] px-4 py-2 rounded-full text-xs uppercase tracking-widest mb-2 md:mb-4">
+          <div  onClick={() => window.scrollBy({ top: 450, behavior: 'smooth' })}  className=" cursor-pointer inline-flex items-center gap-2 bg-[#2d5f2e] px-4 py-2 rounded-full text-xs uppercase tracking-widest mb-2 md:mb-4">
             Services <ArrowRight size={14} /> About Us
           </div>
 

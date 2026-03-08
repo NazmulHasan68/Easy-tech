@@ -58,7 +58,7 @@ export default function HomeShapment() {
                          transition-all duration-300
                          hover:gap-6 hover:shadow-xl"
             >
-              Explore More →
+              Book Free Consultation →
             </a>
           </motion.div>
 

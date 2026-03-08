@@ -115,7 +115,7 @@ export default function HomePricing() {
                   onClick={() => navigate("/contact")}
                   className="bg-linear-to-r from-[#2D602E] to-[#98BC62] text-white px-6 sm:px-8 py-3 rounded-full w-fit shadow-lg hover:scale-105 transition duration-300 text-sm sm:text-base"
                 >
-                  Explore More →
+                  Book Free Consultation →
                 </button>
 
                 <div className="absolute bottom-0 right-3 px-4 py-4 bg-[#2D602E] rounded-tl-2xl text-white text-xs tracking-wider">

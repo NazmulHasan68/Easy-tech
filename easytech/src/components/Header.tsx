@@ -40,7 +40,7 @@ const navItems: NavItem[] = [
     dropdown: [
       { name: "Project", path: "/project" },
       { name: "About", path: "/about" },
-      { name: "Our Client", path: "/our-client" },
+      { name: "Our Client", path: "/client" },
     ],
   },
   { name : "Contact", path : "/contact"},

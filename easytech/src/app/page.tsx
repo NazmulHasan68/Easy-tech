@@ -9,6 +9,11 @@ import HomeTrustedClient from "@/components/home/HomeTrustedClient";
 import HomeServices from "@/components/home/HomeServices";
 import HomeSolutions from "@/components/home/HomeSolutions";
 import HomeResearch from "@/components/home/HomeResearch";
+import HomePricing from "@/components/home/HomePricing";
+import HomeShapment from "@/components/home/HomeShapment";
+import HomeProject from "@/components/home/HomeProject";
+import HomeClientSay from "@/components/home/HomeClientSay";
+import HomeTopClientSlider from "@/components/home/HomeTopClientSlider";
 
 export const metadata: Metadata = { title: "Home" };
 
@@ -52,6 +57,16 @@ export default function HomePage() {
       <HomeSolutions/>
 
       <HomeResearch/>
+
+      <HomePricing/>
+
+      <HomeShapment/>
+
+      <HomeProject/>
+
+      <HomeClientSay/>
+
+      <HomeTopClientSlider/>
 
       
       {/* ── HERO ── */}

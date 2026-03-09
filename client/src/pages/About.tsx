@@ -1,14 +1,15 @@
-import AboutBreadcrumb from "@/components/about/AboutBreadcrumb";
+
 import AboutFAQ from "@/components/about/AboutFAQ";
 import AboutIntro from "@/components/about/AboutIntro";
 import AboutSidebar from "./AboutSidebar";
 import WhatWeProvide from "@/components/Serives/WhatWeProvide";
 import ServiceWebChallenges from "@/components/Serives/web/ServiceWebChallenges";
+import AboutBreadcrumb from "@/components/about/AboutBreadcrumb";
 
 export default function About() {
   return (
     <>
-      <AboutBreadcrumb />
+      <AboutBreadcrumb/>
 
       <section className="max-w-7xl mx-auto px-1 py-16">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">

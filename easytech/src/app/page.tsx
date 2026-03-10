@@ -22,6 +22,7 @@ import { WorldMapDemo } from "@/components/world-map-demo";
 import HomeServiceCards from "@/components/home/HomeServicecards";
 import HomeOwner from "@/components/home/HomeOwner";
 import HomeExpertise from "@/components/home/HomeExpertise";
+import HomeVideoSection from "@/components/home/HomeVideoSection";
 export const metadata: Metadata = { title: "Home" };
 
 
@@ -39,9 +40,12 @@ export default function HomePage() {
 
       <HomeExpertise/>
 
+      <HomeVideoSection/>
+
       <HomeOwner/>
 
-      <WorldMapDemo/>
+
+      {/* <WorldMapDemo/> */}
 
       <HomeTrustedClient/>
 

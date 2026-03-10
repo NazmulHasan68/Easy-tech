@@ -8,7 +8,7 @@ const testimonials = [
   {
     img: "/home/client/client1.jpeg",
     name: "Md. Mainul Hasan Dulon",
-    role: "Founder & CEO, The Premium City LTD",
+    role: "Founder & CEO, The Premium Homes Ltd",
     text: "Hiring this digital agency was the best decision for our business. Their strategy and execution were excellent.",
   },
   {
@@ -53,7 +53,7 @@ export default function HomeClientSay() {
   const [active, setActive] = useState(0);
 
   useEffect(() => {
-    const i = setInterval(() => setActive((p) => (p + 1) % testimonials.length), 4500);
+    const i = setInterval(() => setActive((p) => (p + 1) % testimonials.length), 5500);
     return () => clearInterval(i);
   }, []);
 

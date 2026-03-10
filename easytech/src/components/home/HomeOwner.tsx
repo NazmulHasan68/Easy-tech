@@ -317,7 +317,7 @@ export default function HomeOwner() {
                   [Owner Name]
                 </p>
                 <p className="text-sm mt-0.5" style={{ color: "rgba(255,255,255,0.58)" }}>
-                  Founder & CEO · Easy Tech
+                  Founder & CEO · Easy Tech Solutions
                 </p>
               </div>
             </div>

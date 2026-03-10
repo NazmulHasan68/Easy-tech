@@ -372,7 +372,7 @@ export default function HomeServiceCards() {
                     />
                     {/* Placeholder if no image */}
                     <div
-                      className="absolute inset-0 flex flex-col items-center justify-center gap-4"
+                      className="absolute top-3 right-3 flex flex-col items-center justify-center gap-4"
                       style={{ background: `${svc.accent}0c` }}
                     >
                       <div
@@ -382,15 +382,12 @@ export default function HomeServiceCards() {
                           border: `2px solid ${svc.accent}35`,
                         }}
                       >
-                        <Icon size={36} color={svc.accent} strokeWidth={1.5} />
+                        <Image src="/logo/icon.png" alt="logo" width={40} height={40}/>
                       </div>
-                      <p
-                        className="text-xs font-medium px-4 text-center"
-                        style={{ color: svc.accent }}
-                      >
-                        Add image → {svc.image}
-                      </p>
+
                     </div>
+
+                    
                   </div>
                 </div>
 

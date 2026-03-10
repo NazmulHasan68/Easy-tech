@@ -20,6 +20,8 @@ import HomeTopClientSlider from "@/components/home/HomeTopClientSlider";
 import HomeBrand from "@/components/home/HomeBrand";
 import { WorldMapDemo } from "@/components/world-map-demo";
 import HomeServiceCards from "@/components/home/HomeServicecards";
+import HomeOwner from "@/components/home/HomeOwner";
+import HomeExpertise from "@/components/home/HomeExpertise";
 export const metadata: Metadata = { title: "Home" };
 
 
@@ -34,6 +36,10 @@ export default function HomePage() {
       <HomeBrand/>
 
       <HomeServiceCards/>
+
+      <HomeExpertise/>
+
+      <HomeOwner/>
 
       <WorldMapDemo/>
 

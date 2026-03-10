@@ -23,6 +23,9 @@ const navItems: NavItem[] = [
       { name: "Digital Marketing", path: "/services/marketing" },
       { name: "Software Solution", path: "/services/erp" },
       { name: "Mobile App", path: "/services/app" },
+      { name: "Media Buying", path: "/services/media" },
+      { name: "Business Consultancy", path: "/services/business" },
+      { name: "Domain Hosting", path: "/services/domain" },
     ],
   },
   {

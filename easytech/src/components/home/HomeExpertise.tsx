@@ -19,7 +19,7 @@ const EXPERTISE = [
   { id: "organic",    label: "Organic",           icon: Leaf,            color: "#16a34a", bg: "#f0fdf4" },
   { id: "interior",   label: "Interior",          icon: Sofa,            color: "#b45309", bg: "#fefce8" },
   { id: "restaurant", label: "Restaurant",        icon: UtensilsCrossed, color: "#dc2626", bg: "#fff1f2" },
-  { id: "foundation", label: "Foundation",        icon: Heart,           color: "#db2777", bg: "#fdf2f8" },
+  { id: "Non_profit_oraganisation", label: "Non Profit Organisation",        icon: Heart,           color: "#db2777", bg: "#fdf2f8" },
   { id: "hospital",   label: "Hospital",          icon: Stethoscope,     color: "#0891b2", bg: "#ecfeff" },
 ];
 

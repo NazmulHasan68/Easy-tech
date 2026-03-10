@@ -351,3 +351,12 @@
 @media (min-width: 768px) {
   .hide-desktop { display: none !important; }
 }
+
+
+
+/* 
+threeD */
+
+spline-viewer::part(logo) {
+  display: none !important;
+}

@@ -332,7 +332,7 @@ export default function HomeOwner() {
                 boxShadow: "0 12px 40px rgba(94,76,220,0.18)",
               }}
             >
-              <Image src="/logo/icon.png" height={44} width={44} alt="Easy Tech logo" />
+              <Image priority src="/logo/icon.webp" height={44} width={44} alt="Easy Tech logo" />
             </div>
           </div>
 

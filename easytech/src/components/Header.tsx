@@ -33,7 +33,7 @@ const navItems: NavItem[] = [
     dropdown: [
       { name: "DokanX", path: "/ventures/dokanx" },
       { name: "Cascade", path: "/ventures/cascade" },
-      { name: "SHOMPORKOX", path: "/ventures/shomporkox" },
+      { name: "ShomporkoX", path: "/ventures/shomporkox" },
       { name: "AbashonX", path: "/ventures/abashonx" },
       { name: "EasySoft", path: "/ventures/easysoft" },
     ],
@@ -135,10 +135,10 @@ export default function Header() {
 
           {theme === "dark" ? 
         <Link href="/">
-          <Image src="/logo/logo_v1.svg" alt="Logo" width={35} height={25} className="w-40 h-auto object-contain" priority />
+          <Image priority src="/logo/logo_v1.svg" alt="Logo" width={35} height={25} className="w-40 h-auto object-contain" priority />
         </Link> : 
         <Link href="/">
-          <Image src="/logo/logo_v2.svg" alt="Logo" width={35} height={25} className="w-40 h-auto object-contain" priority />
+          <Image priority src="/logo/logo_v2.svg" alt="Logo" width={35} height={25} className="w-40 h-auto object-contain" priority />
         </Link>
 
         }

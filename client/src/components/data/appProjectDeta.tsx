@@ -66,3 +66,5 @@ export const appProjects = [
     ],
   },
 ];
+
+// npm install -g ngrok

@@ -1,84 +1,209 @@
 import Link from "next/link";
-import { Zap, Mail, Phone, MapPin, Github, Linkedin, Twitter } from "lucide-react";
+import Image from "next/image";
+import { Mail, Phone, MapPin, Facebook, Youtube, Linkedin, Instagram } from "lucide-react";
 
-const LINKS = {
-  pages:    [["Home", "/"], ["Services", "/services"], ["About", "/about"]] as [string, string][],
-  services: ["Web Development", "Mobile Apps", "Digital Marketing", "Software / ERP", "UI/UX Design", "Cloud & DevOps"],
-};
+const PAGES: [string, string][] = [
+  ["Home",         "/"],
+  ["About Us",     "/about"],
+  ["Services",     "/services"],
+  ["Projects",     "/projects"],
+  ["Contact",      "/contact"],
+];
 
-const SOCIALS = [Github, Linkedin, Twitter];
+const SERVICES: [string, string][] = [
+  ["Web Development",       "/services/web"],
+  ["App Development",       "/services/app"],
+  ["Digital Marketing",     "/services/marketing"],
+  ["ERP Solutions",         "/services/erp"],
+  ["Media Buying",          "/services/media-buying"],
+  ["Business Consultancy",  "/services/business-consultancy"],
+];
+
+const SOCIALS = [
+  { icon: Facebook,  href: "https://www.facebook.com/easytechsolutionsbd",  label: "Facebook" },
+  { icon: Instagram, href: "#",                                              label: "Instagram" },
+  { icon: Youtube,   href: "#",                                              label: "YouTube" },
+  { icon: Linkedin,  href: "#",                                              label: "LinkedIn" },
+];
 
 export default function Footer() {
   return (
-    <footer style={{ background: "var(--surface)", borderTop: "1px solid var(--border-color)" }}>
-      <div className="container-xl section-pad">
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "2.5rem", marginBottom: "3rem" }}>
+    <footer
+      className="relative overflow-hidden"
+      style={{ background: "var(--surface)", borderTop: "1px solid var(--border-color)" }}
+    >
+      {/* Glow blobs */}
+      <div
+        className="absolute pointer-events-none rounded-full"
+        style={{ width: "500px", height: "500px", background: "rgba(94,76,220,0.07)", filter: "blur(100px)", top: "-150px", left: "-100px" }}
+      />
+      <div
+        className="absolute pointer-events-none rounded-full"
+        style={{ width: "400px", height: "400px", background: "rgba(167,139,250,0.05)", filter: "blur(100px)", bottom: "-100px", right: "-80px" }}
+      />
 
-          {/* Brand */}
-          <div>
-            <Link href="/" className="flex items-center gap-2 mb-4" style={{ textDecoration: "none" }}>
-              <span className="flex h-8 w-8 items-center justify-center rounded-lg" style={{ background: "linear-gradient(135deg,#5e4cdc,#a78bfa)" }}>
-                <Zap size={16} color="#fff" fill="#fff" />
-              </span>
-              <span className="font-extrabold text-lg" style={{ fontFamily: "var(--font-sans)", color: "var(--foreground)" }}>
-                Easy<span style={{ color: "var(--primary)" }}>Tech</span>
-              </span>
+      <div className="container-xl relative z-10 pt-16 pb-8">
+
+        {/* ── Top grid ── */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-14">
+
+          {/* ── Brand ── */}
+          <div className="lg:col-span-1">
+            <Link href="/" className="inline-flex items-center gap-3 mb-5">
+              <Image
+                src="/logo/icon.webp"
+                alt="Easy Tech"
+                width={40}
+                height={40}
+                className="object-contain"
+              />
+              <div>
+                <p
+                  className="font-extrabold text-xl leading-none"
+                  style={{ fontFamily: "var(--font-sans)", color: "var(--foreground)" }}
+                >
+                  Easy<span style={{ color: "var(--primary)" }}>Tech</span>
+                </p>
+                <p className="text-[10px] uppercase tracking-widest mt-0.5" style={{ color: "var(--muted)" }}>
+                  Solutions
+                </p>
+              </div>
             </Link>
-            <p style={{ color: "var(--muted)", fontSize: "0.88rem", lineHeight: 1.75, marginBottom: "1.25rem", maxWidth: "240px" }}>
-              Building tomorrow's digital products — fast, beautiful, and built to scale.
+
+            <p
+              className="text-sm leading-relaxed mb-6"
+              style={{ color: "var(--muted)", maxWidth: "230px" }}
+            >
+              Building tomorrow's digital products — fast, beautiful, and built to scale for every business.
             </p>
+
+            {/* Socials */}
             <div className="flex gap-2">
-              {SOCIALS.map((Icon, i) => (
-                <a key={i} href="#" className="social-icon" aria-label="social">
+              {SOCIALS.map(({ icon: Icon, href, label }) => (
+                <a
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={label}
+                  className="social-icon"
+                >
                   <Icon size={14} />
                 </a>
               ))}
             </div>
           </div>
 
-          {/* Pages */}
+          {/* ── Pages ── */}
           <div>
-            <p className="mb-4 text-xs font-bold uppercase tracking-widest" style={{ fontFamily: "var(--font-sans)", color: "var(--foreground)" }}>Pages</p>
-            <nav className="flex flex-col gap-2.5">
-              {LINKS.pages.map(([name, path]) => (
-                <Link key={path} href={path} className="hover-primary text-sm">{name}</Link>
+            <p
+              className="mb-5 text-xs font-bold uppercase tracking-[0.2em]"
+              style={{ fontFamily: "var(--font-sans)", color: "var(--foreground)" }}
+            >
+              Pages
+            </p>
+            <nav className="flex flex-col gap-3">
+              {PAGES.map(([name, path]) => (
+                <Link
+                  key={path}
+                  href={path}
+                  className="text-sm hover-primary flex items-center gap-2 group"
+                >
+                  <span
+                    className="block w-1 h-1 rounded-full flex-shrink-0 transition-all duration-200 group-hover:w-3"
+                    style={{ background: "var(--primary)" }}
+                  />
+                  {name}
+                </Link>
               ))}
             </nav>
           </div>
 
-          {/* Services */}
+          {/* ── Services ── */}
           <div>
-            <p className="mb-4 text-xs font-bold uppercase tracking-widest" style={{ fontFamily: "var(--font-sans)", color: "var(--foreground)" }}>Services</p>
-            <nav className="flex flex-col gap-2.5">
-              {LINKS.services.map((s) => (
-                <a key={s} href="#" className="hover-primary text-sm">{s}</a>
+            <p
+              className="mb-5 text-xs font-bold uppercase tracking-[0.2em]"
+              style={{ fontFamily: "var(--font-sans)", color: "var(--foreground)" }}
+            >
+              Services
+            </p>
+            <nav className="flex flex-col gap-3">
+              {SERVICES.map(([name, path]) => (
+                <Link
+                  key={path}
+                  href={path}
+                  className="text-sm hover-primary flex items-center gap-2 group"
+                >
+                  <span
+                    className="block w-1 h-1 rounded-full flex-shrink-0 transition-all duration-200 group-hover:w-3"
+                    style={{ background: "var(--primary)" }}
+                  />
+                  {name}
+                </Link>
               ))}
             </nav>
           </div>
 
-          {/* Contact */}
+          {/* ── Contact ── */}
           <div>
-            <p className="mb-4 text-xs font-bold uppercase tracking-widest" style={{ fontFamily: "var(--font-sans)", color: "var(--foreground)" }}>Contact</p>
-            <div className="flex flex-col gap-3">
+            <p
+              className="mb-5 text-xs font-bold uppercase tracking-[0.2em]"
+              style={{ fontFamily: "var(--font-sans)", color: "var(--foreground)" }}
+            >
+              Contact Us
+            </p>
+
+            <div className="flex flex-col gap-4 mb-7">
               {([
-                [Mail,   "hello@easytech.io"],
-                [Phone,  "+880 1700-000000"],
-                [MapPin, "Gulshan-1, Dhaka 1212"],
-              ] as const).map(([Icon, text]) => (
-                <div key={text} className="flex items-start gap-2.5">
-                  <Icon size={14} style={{ color: "var(--primary)", marginTop: "2px", flexShrink: 0 }} />
-                  <span style={{ color: "var(--muted)", fontSize: "0.87rem", lineHeight: 1.5 }}>{text}</span>
-                </div>
+                [Mail,   "info@easytechsolutions.com", "mailto:info@easytechsolutions.comm"],
+                [Phone,  "+880 1580-741616",               "tel:+8801580741616"],
+                [MapPin, "23/2, SEL HUQ SKYPARK, Mirpur Rd, Dhaka",         "#"],
+              ] as const).map(([Icon, text, href]) => (
+                <a
+                  key={text}
+                  href={href}
+                  className="flex items-start gap-3 group"
+                  style={{ textDecoration: "none" }}
+                >
+                  <span
+                    className="flex-shrink-0 w-8 h-8 rounded-lg flex items-center justify-center transition-colors duration-200"
+                    style={{
+                      background: "rgba(94,76,220,0.1)",
+                      border: "1px solid rgba(94,76,220,0.2)",
+                    }}
+                  >
+                    <Icon size={13} style={{ color: "var(--primary)" }} />
+                  </span>
+                  <span
+                    className="text-sm leading-relaxed pt-1 group-hover:text-[var(--primary)] transition-colors duration-200"
+                    style={{ color: "var(--muted)" }}
+                  >
+                    {text}
+                  </span>
+                </a>
               ))}
             </div>
+
+            {/* CTA */}
+            <Link href="/contact" className="btn btn-primary btn-sm w-full justify-center">
+              Get a Free Quote →
+            </Link>
           </div>
         </div>
 
-        {/* Bottom */}
-        <div className="flex flex-wrap items-center justify-between gap-3 pt-6" style={{ borderTop: "1px solid var(--border-color)" }}>
-          <p style={{ color: "var(--muted)", fontSize: "0.82rem" }}>© {new Date().getFullYear()} EasyTech. All rights reserved.</p>
-          <p style={{ color: "var(--muted)", fontSize: "0.82rem" }}>Built with <span style={{ color: "var(--primary)" }}>♥</span> in Bangladesh</p>
+        {/* ── Divider ── */}
+        <div className="h-px w-full mb-6" style={{ background: "var(--border-color)" }} />
+
+        {/* ── Bottom ── */}
+        <div className="flex flex-wrap items-center justify-between gap-3">
+          <p style={{ color: "var(--muted)", fontSize: "0.82rem" }}>
+            © {new Date().getFullYear()} Easy Tech Solutions. All rights reserved.
+          </p>
+          <p style={{ color: "var(--muted)", fontSize: "0.82rem" }}>
+            Crafted with <span style={{ color: "#e5484d" }}></span> in Dhaka, Bangladesh
+          </p>
         </div>
+
       </div>
     </footer>
   );

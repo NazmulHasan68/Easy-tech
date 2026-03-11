@@ -238,7 +238,7 @@ export default function HomeServicesHub() {
                 boxShadow: "0 0 36px rgba(94,76,220,0.6), 0 0 80px rgba(94,76,220,0.2)",
               }}
             >
-              <Image src="/logo/icon.png" alt="Easy Tech" width={44} height={44} className="object-contain" />
+              <Image priority src="/logo/icon.webp" alt="Easy Tech" width={44} height={44} className="object-contain" />
             </div>
           </div>
 

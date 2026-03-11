@@ -25,7 +25,7 @@ const dmSans = DM_Sans({
 export const metadata: Metadata = {
   title: { default: "EasyTech — Digital Innovation Agency", template: "%s | EasyTech" },
   icons: {
-    icon: "/logo/icon.png",
+    icon: "/logo/icon.webp",
   },
   description: "We build world-class web, mobile & software products for ambitious businesses across Bangladesh and beyond.",
   keywords: ["web development", "mobile apps", "digital marketing", "software", "Bangladesh", "Dhaka"],

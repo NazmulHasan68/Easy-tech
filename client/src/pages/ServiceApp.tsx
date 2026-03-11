@@ -4,7 +4,7 @@ import ServiceWebChallenges from "@/components/Serives/web/ServiceWebChallenges"
 import ServiceAppBanner from "@/components/Serives/app/ServiceAppBanner";
 import ServiceAppProject from "@/components/Serives/app/ServiceAppProject";
 import ServiceAppIntro from "@/components/Serives/app/ServiceAppIntro";
-import ServiceAppDemo from "@/components/Serives/app/ServiceAppDemo";
+// import ServiceAppDemo from "@/components/Serives/app/ServiceAppDemo";
 import MobileServiceAppQuestion from "@/components/Serives/app/ServiceAppQustion";
 
 export default function ServiceApp() {

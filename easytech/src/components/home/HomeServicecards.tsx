@@ -382,7 +382,7 @@ export default function HomeServiceCards() {
                           border: `2px solid ${svc.accent}35`,
                         }}
                       >
-                        <Image src="/logo/icon.png" alt="logo" width={40} height={40}/>
+                        <Image priority src="/logo/icon.webp" alt="logo" width={40} height={40}/>
                       </div>
 
                     </div>

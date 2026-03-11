@@ -9,6 +9,9 @@ const services = [
   { name: "Web Development",         href: "/services/web" },
   { name: "CRM / ERP Solutions",     href: "/services/erp" },
   { name: "Mobile App Development",  href: "/services/app" },
+  { name: "Business Consultancy",  href: "/services/business" },
+  { name: "Media buying",  href: "/services/media" },
+  { name: "Domain & Hosting",  href: "/services/domain" },
 ];
 
 export default function AboutSidebar() {

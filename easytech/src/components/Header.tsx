@@ -135,10 +135,10 @@ export default function Header() {
 
           {theme === "dark" ? 
         <Link href="/">
-          <Image priority src="/logo/logo_v1.svg" alt="Logo" width={35} height={25} className="w-40 h-auto object-contain" priority />
+          <Image priority src="/logo/logo_v1.svg" alt="Logo" width={35} height={25} className="w-40 h-auto object-contain"  />
         </Link> : 
         <Link href="/">
-          <Image priority src="/logo/logo_v2.svg" alt="Logo" width={35} height={25} className="w-40 h-auto object-contain" priority />
+          <Image priority src="/logo/logo_v2.svg" alt="Logo" width={35} height={25} className="w-40 h-auto object-contain"  />
         </Link>
 
         }
@@ -210,7 +210,7 @@ export default function Header() {
               {/* Header */}
               <div className="flex items-center justify-between px-6 py-4 border-b border-[var(--color-secondary)]/20">
                 <Image
-                  src="/logo.png"
+                  src="/logo/icon.webp"
                   alt="Logo"
                   width={30}
                   height={30}

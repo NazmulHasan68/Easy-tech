@@ -367,7 +367,7 @@ export default function HomeOwner() {
             {/* English quote — SplitText word reveal */}
             <blockquote
               ref={enQuoteRef}
-              className="text-2xl md:text-3xl lg:text-[2rem] font-bold leading-snug will-change-transform"
+              className="text-xl md:text-3xl lg:text-[2rem] font-bold leading-snug will-change-transform"
               style={{ color: "var(--foreground)", fontFamily: "var(--font-sans)" }}
             >
               "At Easy Tech Solutions, we don't measure success by the lines of
@@ -390,7 +390,7 @@ export default function HomeOwner() {
             {/* Bangla quote — line reveal */}
             <blockquote
               ref={bnQuoteRef}
-              className="text-lg md:text-xl leading-[2] will-change-transform"
+              className="text-md md:text-xl leading-[2] will-change-transform"
               style={{ color: "var(--muted)", fontFamily: "var(--font-body)" }}
             >
               "Easy Tech Solutions-এ আমরা সাফল্য পরিমাপ করি না কোডের লাইন
@@ -404,21 +404,21 @@ export default function HomeOwner() {
             {/* Stats */}
             <div
               ref={statsRef}
-              className="flex flex-wrap gap-10 pt-7 border-t will-change-transform"
+              className="flex flex-wrap gap-4 md:gap-10 pt-4 border-t will-change-transform"
               style={{ borderColor: "var(--border-color)" }}
             >
               {[
-                { value: "5+",   label: "Years Experience",    bn: "বছরের অভিজ্ঞতা" },
-                { value: "120+", label: "Projects Delivered",  bn: "সফল প্রজেক্ট" },
-                { value: "98%",  label: "Client Satisfaction", bn: "ক্লায়েন্ট সন্তুষ্টি" },
+                { value: "5+",   label: "Years",    bn: "বছরের অভিজ্ঞতা" },
+                { value: "120+", label: "Projects",  bn: "সফল প্রজেক্ট" },
+                { value: "98%",  label: "Satisfaction", bn: "ক্লায়েন্ট সন্তুষ্টি" },
               ].map((stat, i) => (
                 <div
                   key={stat.label}
                   ref={(el) => { if (el) statItemsRef.current[i] = el; }}
-                  className="will-change-transform"
+                  className="will-change-transform text-center"
                 >
                   <p
-                    className="text-4xl font-extrabold tabular-nums"
+                    className="text-2xl md:text-4xl font-extrabold tabular-nums"
                     style={{ color: "var(--primary)", fontFamily: "var(--font-sans)" }}
                   >
                     {stat.value}

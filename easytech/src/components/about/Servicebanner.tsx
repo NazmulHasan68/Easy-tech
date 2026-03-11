@@ -94,7 +94,7 @@ export default function ServiceBanner({
           <div
             ref={badgeRef}
             onClick={() => window.scrollBy({ top: 450, behavior: "smooth" })}
-            className="badge cursor-pointer mb-5 will-change-transform"
+            className="badge cursor-pointer mb-5 will-change-transform mt-16"
             style={{ background: "rgba(94,76,220,0.22)", borderColor: "rgba(94,76,220,0.5)", color: "#c4b5fd" }}
           >
             Services <ArrowRight size={12} /> {service}

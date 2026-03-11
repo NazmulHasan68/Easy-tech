@@ -104,21 +104,13 @@ export default function HomeHero() {
 
         {/* LEFT */}
         <div className="lg:w-1/2 space-y-6 md:space-y-10 mt-12 md:mt-4">
-          <motion.span
-            initial={{ opacity:0, scale:.9 }}
-            animate={{ opacity:1, scale:1 }}
-            transition={{ delay:.1, duration:.4 }}
-            className="inline-block font-semibold px-4 py-2 rounded-full text-sm border"
-            style={{ color:"var(--primary)", background:"rgba(94,76,220,0.1)", borderColor:"rgba(94,76,220,0.2)" }}
-          >
-            Digital Solutions
-          </motion.span>
+ 
 
           {/*
             ✅ LCP FIX: h1 has NO animation wrapper / motion.div
             Renders immediately without any JS delay
           */}
-          <h1
+          <div
             className="text-5xl lg:text-7xl font-extrabold leading-tight"
             style={{ color:"var(--foreground)", fontFamily:"var(--font-sans)" }}
           >
@@ -127,7 +119,7 @@ export default function HomeHero() {
             <span style={{ background:"linear-gradient(130deg,#5e4cdc 0%,#a78bfa 100%)", WebkitBackgroundClip:"text", WebkitTextFillColor:"transparent", backgroundClip:"text" }}>
               Digital Result
             </span>
-          </h1>
+          </div>
 
           <motion.p
             initial={{ opacity:0, y:16 }}
@@ -197,16 +189,10 @@ export default function HomeHero() {
             style={{ background:"var(--surface)", borderColor:"rgba(94,76,220,0.2)", boxShadow:"0 8px 32px rgba(94,76,220,0.12)" }}
           >
             <p className="text-xs mb-1" style={{ color:"var(--muted)" }}>Profile Views</p>
-            <h4 className="text-xl md:text-2xl font-bold" style={{ color:"var(--primary)" }}>45M+</h4>
+            <h4 className="text-xl md:text-2xl font-bold" style={{ color:"var(--primary)" }}>15M+</h4>
           </motion.div>
 
-          <motion.div initial={{ opacity:0, y:40 }} animate={{ opacity:1, y:0 }} transition={{ delay:1.2 }}
-            className="absolute bottom-4 left-0 md:left-8 rounded-2xl p-3 md:p-4 w-36 md:w-44 border"
-            style={{ background:"var(--surface)", borderColor:"rgba(94,76,220,0.2)", boxShadow:"0 8px 32px rgba(94,76,220,0.12)" }}
-          >
-            <p className="text-xs mb-2" style={{ color:"var(--muted)" }}>Growth</p>
-            <div className="h-5 md:h-7 rounded-lg" style={{ background:"linear-gradient(90deg,#5e4cdc,#a78bfa)" }} />
-          </motion.div>
+
         </div>
       </div>
     </section>

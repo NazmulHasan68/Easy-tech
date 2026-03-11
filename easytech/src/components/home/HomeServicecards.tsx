@@ -235,17 +235,17 @@ export default function HomeServiceCards() {
       {/* ── Icon pills — small at first, grow on scroll ── */}
       <div
         ref={iconRowRef}
-        className="max-w-7xl mx-auto px-6 lg:px-12 mb-20 will-change-transform"
+        className="max-w-7xl mx-auto px-2 md:px-6 lg:px-12 mb-20 will-change-transform"
         style={{ transformOrigin: "bottom center" }}
       >
-        <div className="flex flex-wrap justify-center gap-3">
+        <div className="flex flex-wrap justify-center gap-2 md:gap-3">
           {SERVICES.map((svc, i) => {
             const Icon = svc.icon;
             return (
               <div
                 key={svc.id}
                 ref={(el) => { if (el) iconRefs.current[i] = el; }}
-                className="flex items-center gap-2 px-4 py-2.5 rounded-2xl border will-change-transform"
+                className="flex items-center gap-2 px-2 md:px-4 py-2.5 rounded-2xl border will-change-transform"
                 style={{
                   background: `${svc.accent}10`,
                   borderColor: `${svc.accent}30`,
@@ -382,7 +382,7 @@ export default function HomeServiceCards() {
                           border: `2px solid ${svc.accent}35`,
                         }}
                       >
-                        <Image priority src="/logo/icon.webp" alt="logo" width={40} height={40}/>
+                        <Image src="/logo/icon.png" alt="logo" width={40} height={40}/>
                       </div>
 
                     </div>

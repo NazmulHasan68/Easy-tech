@@ -30,7 +30,7 @@ const SOCIALS = [
 ];
 
 export default function Footer() {
-    const { theme, toggle } = useTheme();
+  const { theme, toggle } = useTheme();
   return (
     <footer
       className="relative overflow-hidden"
@@ -148,9 +148,9 @@ export default function Footer() {
 
             <div className="flex flex-col gap-4 mb-7">
               {([
-                [Mail,   "info@easytechsolutions.com", "mailto:info@easytechsolutions.comm"],
-                [Phone,  "+880 1580-741616",               "tel:+8801580741616"],
-                [MapPin, "23/2, SEL HUQ SKYPARK, Mirpur Rd, Dhaka",         "#"],
+                [Mail,   "info@easytechsolutions.com",                        "mailto:info@easytechsolutions.com"],
+                [Phone,  "+880 1580-741616",                                  "tel:+8801580741616"],
+                [MapPin, "23/2, SEL HUQ SKYPARK, Mirpur Rd, Dhaka",          "#"],
               ] as const).map(([Icon, text, href]) => (
                 <a
                   key={text}
@@ -169,6 +169,46 @@ export default function Footer() {
                   </span>
                   <span
                     className="text-sm leading-relaxed pt-1 group-hover:text-[var(--primary)] transition-colors duration-200"
+                    style={{ color: "var(--muted)" }}
+                  >
+                    {text}
+                  </span>
+                </a>
+              ))}
+
+              {/* ── USA office separator + address ── */}
+              <div
+                className="flex items-center gap-2 pt-1"
+                style={{ borderTop: "1px solid var(--border-color)" }}
+              >
+                <span className="text-[10px] font-black uppercase tracking-[0.18em] pt-3" style={{ color: "var(--muted)", opacity: 0.5 }}>
+                  🇺🇸 USA Office
+                </span>
+              </div>
+
+              {([
+                [Phone,  "+1 (813) 436-5206",                                 "tel:+18134365206"],
+                [MapPin, "7901 4th St N, Ste 300\nSt. Petersburg, FL 33702",  "https://maps.google.com/?q=7901+4th+St+N+Ste+300+St+Petersburg+FL+33702"],
+              ] as const).map(([Icon, text, href]) => (
+                <a
+                  key={text}
+                  href={href}
+                  target={href.startsWith("http") ? "_blank" : undefined}
+                  rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
+                  className="flex items-start gap-3 group"
+                  style={{ textDecoration: "none" }}
+                >
+                  <span
+                    className="flex-shrink-0 w-8 h-8 rounded-lg flex items-center justify-center transition-colors duration-200"
+                    style={{
+                      background: "rgba(94,76,220,0.1)",
+                      border: "1px solid rgba(94,76,220,0.2)",
+                    }}
+                  >
+                    <Icon size={13} style={{ color: "var(--primary)" }} />
+                  </span>
+                  <span
+                    className="text-sm leading-relaxed pt-1 group-hover:text-[var(--primary)] transition-colors duration-200 whitespace-pre-line"
                     style={{ color: "var(--muted)" }}
                   >
                     {text}

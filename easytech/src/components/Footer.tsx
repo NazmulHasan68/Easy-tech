@@ -1,6 +1,9 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
 import { Mail, Phone, MapPin, Facebook, Youtube, Linkedin, Instagram } from "lucide-react";
+import { useTheme } from "./ThemeProvider";
 
 const PAGES: [string, string][] = [
   ["Home",         "/"],
@@ -27,6 +30,7 @@ const SOCIALS = [
 ];
 
 export default function Footer() {
+    const { theme, toggle } = useTheme();
   return (
     <footer
       className="relative overflow-hidden"
@@ -49,29 +53,18 @@ export default function Footer() {
 
           {/* ── Brand ── */}
           <div className="lg:col-span-1">
-            <Link href="/" className="inline-flex items-center gap-3 mb-5">
-              <Image
-                src="/logo/icon.webp"
-                alt="Easy Tech"
-                width={40}
-                height={40}
-                className="object-contain"
-              />
-              <div>
-                <p
-                  className="font-extrabold text-xl leading-none"
-                  style={{ fontFamily: "var(--font-sans)", color: "var(--foreground)" }}
-                >
-                  Easy<span style={{ color: "var(--primary)" }}>Tech</span>
-                </p>
-                <p className="text-[10px] uppercase tracking-widest mt-0.5" style={{ color: "var(--muted)" }}>
-                  Solutions
-                </p>
-              </div>
+            
+          {theme === "dark" ? 
+            <Link href="/">
+              <Image priority src="/logo/logo_v1.svg" alt="Logo" width={35} height={25} className="w-40 h-auto object-contain"  />
+            </Link> : 
+            <Link href="/">
+              <Image priority src="/logo/logo_v2.svg" alt="Logo" width={35} height={25} className="w-40 h-auto object-contain"  />
             </Link>
+          }
 
             <p
-              className="text-sm leading-relaxed mb-6"
+              className="text-sm leading-relaxed my-6"
               style={{ color: "var(--muted)", maxWidth: "230px" }}
             >
               Building tomorrow's digital products — fast, beautiful, and built to scale for every business.

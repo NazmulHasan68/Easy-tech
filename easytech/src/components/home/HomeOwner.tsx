@@ -285,7 +285,7 @@ export default function HomeOwner() {
               }}
             >
               <Image
-                src="/owner/owner.jpg"
+                src="/logo/ceo_easy_tech.png"
                 alt="Easy Tech Founder"
                 fill
                 className="object-cover object-top"
@@ -293,7 +293,7 @@ export default function HomeOwner() {
               />
 
               {/* Placeholder */}
-              <div
+              {/* <div
                 className="absolute inset-0 flex flex-col items-center justify-center gap-4"
                 style={{ background: "linear-gradient(160deg, #f5f4ff 0%, #eeedf9 100%)" }}
               >
@@ -306,7 +306,7 @@ export default function HomeOwner() {
                 <p className="text-xs font-medium" style={{ color: "var(--muted)" }}>
                   Add photo → /public/owner/owner.jpg
                 </p>
-              </div>
+              </div> */}
 
               {/* Name plate */}
               <div
@@ -314,7 +314,7 @@ export default function HomeOwner() {
                 style={{ background: "linear-gradient(to top, rgba(7,0,44,0.9) 0%, transparent 100%)" }}
               >
                 <p className="text-white font-bold text-xl" style={{ fontFamily: "var(--font-sans)" }}>
-                  [Owner Name]
+                  Mehedi H. Jony
                 </p>
                 <p className="text-sm mt-0.5" style={{ color: "rgba(255,255,255,0.58)" }}>
                   Founder & CEO · Easy Tech Solutions

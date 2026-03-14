@@ -58,79 +58,57 @@ function VideoCard({
   activeIndex: number | null;
   onActivate: (i: number | null) => void;
 }) {
-  const cardRef  = useRef<HTMLDivElement>(null);
-  const videoRef = useRef<HTMLVideoElement>(null);
-  const hoverTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
-  const [loaded,  setLoaded]  = useState(false);
-  const [playing, setPlaying] = useState(false);
-  const [muted,   setMuted]   = useState(true);
+  const cardRef   = useRef<HTMLDivElement>(null);
+  const videoRef  = useRef<HTMLVideoElement>(null);
+  const [muted, setMuted] = useState(true);
 
-  /* Lazy load — IntersectionObserver */
+  /* Autoplay muted as soon as card enters viewport */
   useEffect(() => {
     const el = cardRef.current;
-    if (!el) return;
+    const v  = videoRef.current;
+    if (!el || !v) return;
+
     const obs = new IntersectionObserver(
-      ([e]) => { if (e.isIntersecting) { setLoaded(true); obs.disconnect(); } },
-      { rootMargin: "400px" }
+      ([e]) => {
+        if (e.isIntersecting) {
+          v.muted = true;
+          v.play().catch(() => {});
+        } else {
+          v.pause();
+        }
+      },
+      { threshold: 0.3 }
     );
     obs.observe(el);
     return () => obs.disconnect();
   }, []);
 
-  /* Stop when another card becomes active */
+  /* When this card becomes active (hovered) → unmute */
   useEffect(() => {
-    if (activeIndex !== index && playing) {
-      videoRef.current?.pause();
-      setPlaying(false);
-    }
-  }, [activeIndex, index, playing]);
-
-  /* Play video */
-  const startPlay = useCallback(async () => {
-    const v = videoRef.current;
-    if (!v || playing) return;
-    onActivate(index);
-    try {
-      v.currentTime = 0;
-      v.muted = true;
-      setMuted(true);
-      await v.play();
-      setPlaying(true);
-    } catch {
-      setPlaying(false);
-    }
-  }, [playing, index, onActivate]);
-
-  /* Stop video */
-  const stopPlay = useCallback(() => {
     const v = videoRef.current;
     if (!v) return;
-    v.pause();
-    v.currentTime = 0;
-    setPlaying(false);
+    if (activeIndex === index) {
+      v.muted = false;
+      setMuted(false);
+      v.play().catch(() => {});
+    } else {
+      v.muted = true;
+      setMuted(true);
+    }
+  }, [activeIndex, index]);
+
+  const handleMouseEnter = useCallback(() => {
+    onActivate(index);
+  }, [index, onActivate]);
+
+  const handleMouseLeave = useCallback(() => {
     onActivate(null);
   }, [onActivate]);
 
-  /* Hover handlers — short delay so accidental hover doesn't fire */
-  const handleMouseEnter = useCallback(() => {
-    hoverTimerRef.current = setTimeout(() => {
-      startPlay();
-    }, 150);
-  }, [startPlay]);
-
-  const handleMouseLeave = useCallback(() => {
-    if (hoverTimerRef.current) {
-      clearTimeout(hoverTimerRef.current);
-      hoverTimerRef.current = null;
-    }
-    stopPlay();
-  }, [stopPlay]);
-
-  /* Touch — tap toggles */
+  /* Touch tap → toggle active (unmute/mute) */
   const handleTap = useCallback(() => {
-    if (playing) stopPlay();
-    else startPlay();
-  }, [playing, startPlay, stopPlay]);
+    onActivate(activeIndex === index ? null : index);
+  }, [activeIndex, index, onActivate]);
 
   const toggleMute = useCallback((e: React.MouseEvent) => {
     e.stopPropagation();
@@ -160,90 +138,46 @@ function VideoCard({
         transition: "box-shadow 0.4s ease, transform 0.4s ease",
       }}
     >
-      {/* Gradient fallback — always visible behind video */}
-      <div
-        className="absolute inset-0"
-        style={{
-          background: `linear-gradient(160deg, ${item.accent}40 0%, #07002c 55%, #000 100%)`,
-        }}
-      />
+      {/* Dark base behind video */}
+      <div className="absolute inset-0 bg-black" />
 
-      {/* Idle avatar — shown when not playing */}
-      <div
-        className="absolute inset-0 flex flex-col items-center justify-center gap-3 z-10 transition-opacity duration-500"
-        style={{ opacity: playing ? 0 : 1, pointerEvents: "none" }}
-      >
-        <div
-          className="w-16 h-16 rounded-full flex items-center justify-center text-xl font-extrabold"
-          style={{
-            background: `${item.accent}20`,
-            border: `2px solid ${item.accent}55`,
-            color: item.accent,
-            fontFamily: "var(--font-sans)",
-          }}
-        >
-          {item.name[0]}
-        </div>
-        <span className="text-[11px] font-semibold tracking-wider uppercase" style={{ color: item.accent, opacity: 0.7 }}>
-          {item.company}
-        </span>
-        {/* Hover hint */}
-        <div
-          className="mt-2 flex flex-col items-center gap-1 opacity-60"
-        >
-          <div
-            className="w-8 h-8 rounded-full flex items-center justify-center"
-            style={{ background: `${item.accent}20`, border: `1px solid ${item.accent}40` }}
-          >
-            <svg width="12" height="14" viewBox="0 0 12 14" fill={item.accent}>
-              <path d="M1 1l10 6L1 13V1z" />
-            </svg>
-          </div>
-          <span className="text-[9px] uppercase tracking-widest" style={{ color: item.accent }}>Hover to play</span>
-        </div>
-      </div>
+      {/* Video — always loaded, autoplays muted */}
+      <video
+        ref={videoRef}
+        src={item.video}
+        muted
+        playsInline
+        loop
+        preload="auto"
+        className="absolute inset-0 w-full h-full object-cover"
+      />
 
       {/* Top accent line */}
       <div
-        className="absolute top-0 left-0 right-0 h-[3px] z-20 transition-opacity duration-400"
+        className="absolute top-0 left-0 right-0 h-[3px] z-20"
         style={{
           background: `linear-gradient(90deg, transparent, ${item.accent}, transparent)`,
           opacity: isActive ? 1 : 0.35,
+          transition: "opacity 0.4s ease",
         }}
       />
-
-      {/* Video — lazy loaded */}
-      {loaded && (
-        <video
-          ref={videoRef}
-          src={item.video}
-          muted
-          playsInline
-          loop
-          preload="none"
-          className="absolute inset-0 w-full h-full object-cover transition-opacity duration-500"
-          style={{ opacity: playing ? 1 : 0 }}
-        />
-      )}
 
       {/* Bottom gradient overlay */}
       <div
         className="absolute inset-0 z-10"
         style={{
-          background: "linear-gradient(to top, rgba(0,0,0,0.92) 0%, rgba(0,0,0,0.2) 50%, transparent 100%)",
+          background: "linear-gradient(to top, rgba(0,0,0,0.92) 0%, rgba(0,0,0,0.15) 55%, transparent 100%)",
         }}
       />
 
-      {/* Mute toggle — visible when playing */}
+      {/* Mute toggle — always visible */}
       <button
         onClick={toggleMute}
-        className="absolute top-4 right-4 z-30 w-8 h-8 rounded-full flex items-center justify-center transition-opacity duration-300"
+        className="absolute top-4 right-4 z-30 w-8 h-8 rounded-full flex items-center justify-center"
         style={{
           background: "rgba(0,0,0,0.5)",
           border: `1px solid ${item.accent}55`,
           backdropFilter: "blur(8px)",
-          opacity: playing ? 1 : 0,
-          pointerEvents: playing ? "auto" : "none",
         }}
         aria-label={muted ? "Unmute" : "Mute"}
       >
@@ -340,11 +274,8 @@ export default function HomeVideoSection() {
               <span className="word inline-block will-change-transform">Success,&nbsp;</span>
               <br />
               <span className="word inline-block will-change-transform">Story&nbsp;</span>
-          
             </h2>
           </div>
-
-
         </div>
 
         {/* Cards row */}

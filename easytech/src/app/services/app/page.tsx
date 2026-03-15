@@ -21,7 +21,7 @@ export default function page() {
         description="We build cross-platform iOS & Android apps that users love — fast, secure, and beautifully designed."
         pills={["React Native", "Flutter", "iOS", "Android", "Firebase"]}
         ctaLabel="Build Your App"
-        bgImage="/services/app/app_banner.jpg"
+        bgImage="/services/app/app_cover.png"
         stats={[
           { icon: "Smartphone",  value: "30+",   label: "Apps Launched" },
           { icon: "Star",        value: "4.9★",  label: "Avg. App Rating" },

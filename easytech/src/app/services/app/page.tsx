@@ -55,7 +55,7 @@ export default function page() {
                 "Secure API & Backend Integration",
                 "Ongoing Support & Maintenance",
               ]}
-              image="/services/app/app_2.jpg"
+              image="/services/app/app_s1.jpg"
               imageAlt="App Development by Easy Tech"
               badgeTop="5+ Years Experience"
               badgeBottom="App Excellence"

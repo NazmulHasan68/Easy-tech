@@ -19,7 +19,7 @@ export default function page() {
         description="99.9% uptime, free SSL, blazing fast NVMe servers, and expert 24/7 support — everything your website needs."
         pills={["NVMe SSD", "Free SSL", "cPanel", "Daily Backups", "CDN"]}
         ctaLabel="Get Hosting"
-        bgImage="/services/domain/domain.jpg"
+        bgImage="/services/domain/domain_1.jpg"
         stats={[
           { icon: "Zap",         value: "99.9%", label: "Uptime SLA" },
           { icon: "ShieldCheck", value: "Free",  label: "SSL Included" },

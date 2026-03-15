@@ -58,7 +58,7 @@ export default function page() {
                   "Market Research & Analysis",
                   "Process Optimization & Efficiency",
                 ]}
-                image="/services/business/business_1.png"
+                image="/services/business/business_2.jpg"
                 imageAlt="Business Consultancy by Easy Tech"
                 badgeTop="120+ Businesses Scaled"
                 badgeBottom="Consultancy Excellence"
